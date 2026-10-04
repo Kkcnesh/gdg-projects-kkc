@@ -1,0 +1,98 @@
+for most steps ai wasnt used as i have some skills in ml ( very basic tho)
+
+the preprocessing cleaning and model training was done by me only when i got poor f1 scores accuracy i used chatgpt ( base plan)
+to figure out what went wrong with my code it helped me understand my dataset better and also show how there is very less correlation 
+between the given metrics and a student acutally being Placed
+
+it also helped me learn more things which i was previously unaware of such as finding correlation in data set with actual outcomes
+of the model
+
+
+time for some ai usage in the ai usage document :)  
+
+# AI Usage
+
+AI was used as a supporting tool during the development of this project.
+
+## How AI Was Used
+
+AI was **not used to perform the data preprocessing or model training** for the project.
+
+I independently implemented the preprocessing pipeline, trained the classification models, and evaluated their performance using the supplied dataset.
+
+AI was mainly used after the initial models produced unexpectedly poor results.
+
+## Understanding the Poor Model Performance
+
+After training the initial models, the evaluation scores were relatively low.
+
+This made me question whether there was a mistake in:
+
+- Data preprocessing
+- Feature selection
+- Model implementation
+- The structure of the dataset
+- The relationship between the input features and the placement target
+
+I used AI to help me investigate and understand the dataset rather than simply trying to increase the model's score.
+
+## Dataset Analysis
+
+With AI assistance, I explored the relationships between the available features and the `placement` target.
+
+This included examining:
+
+- Feature distributions
+- Feature-target relationships
+- Numeric correlations
+- Categorical feature distributions
+- Mutual information
+- Differences in feature values between placed and not-placed students
+
+The analysis showed that the available parameters had very weak relationships with the placement outcome.
+
+For example, features such as:
+
+- CGPA
+- Projects
+- Technical skill
+- Communication skill
+- Aptitude skill
+- Team skill
+- Backlogs
+
+showed little meaningful difference between the `Placed` and `Not Placed` groups.
+
+The numeric correlations with the placement target were also very close to zero.
+
+## How This Changed My Approach
+
+Initially, I suspected that the poor model performance might be caused by an implementation mistake.
+
+After investigating the dataset, I concluded that the low performance was largely related to the weak predictive signal present in the supplied synthetic dataset.
+
+Because of this, I decided **not to artificially modify the target labels, manufacture stronger features, or repeatedly tune the models simply to obtain a higher score**.
+
+Instead, I kept the results produced by the actual models and documented the limitation of the dataset.
+
+## Role of AI
+
+AI therefore acted primarily as a debugging and analysis assistant.
+
+It helped me:
+
+1. Question whether the poor model performance was caused by an implementation issue.
+2. Identify useful ways to inspect the dataset.
+3. Interpret the results of the analysis.
+4. Understand why the available features were not providing strong predictive information.
+5. Decide how to document the limitation honestly.
+
+The actual preprocessing, model implementation, training, and evaluation were performed in Python using Pandas and Scikit-learn.
+
+## Human Verification
+
+All conclusions were checked against the actual dataset and model results.
+
+AI suggestions were treated as guidance rather than as automatically correct answers.
+
+The final project reports the model performance obtained from the actual implementation and does not use fabricated metric values.
